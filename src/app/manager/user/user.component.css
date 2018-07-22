@@ -1,0 +1,94 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .example-container {
+    flex:1;
+    position: fixed;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  .example-sidenav-content {
+    height: 100%;
+    align-items: center;
+    margin: 30px;
+    background: url(/assets/image/UniversityBua-campus.jpg)  no-repeat center;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  .example-sidenav {
+    padding: 10px;
+    width: 240px;
+  }
+
+  .list{
+    margin-top: 60px;
+
+  }
+  .list mat-list-item{
+      margin-bottom: 20px;
+  }
+
+  .wrapper {
+    margin: 50px;
+  }
+.example-fill-remaining-space{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: #145A32;
+}
+  .tool{
+     background-color: #CEE3F6; 
+  }
+  .tool1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #145A32;
+ }
+  .example-card {
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10%;
+  background-color: white;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  .color1{ 
+     background-color: green;
+  }
+  .mat-elevation-z10{
+    padding: 7px;
+    background-color: #CEE3F6;
+  }
+  

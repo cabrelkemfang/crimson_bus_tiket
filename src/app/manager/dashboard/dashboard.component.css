@@ -1,0 +1,99 @@
+.dash-card{
+    width: 50%;
+    margin-left:25%;
+    margin-top:3%;
+}
+.spa{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.greetings{
+   font-size: 50px;
+    width: 70%;
+    height: 80%;
+    text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  background-color: white;
+  font-family: 'Bad Script', cursive;
+}
+.heading{
+    margin-left: 30%;
+}
+.btn1{
+    margin-left: 200px;
+}
+
+.btn2{
+    margin-left: 50px;
+}
+.add{
+    margin-left: 75%;
+    margin-top: 1%;
+}
+.tool{
+    margin-top:2%;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .example-card{
+      margin: 50px;
+  }
+  .footer{
+ background-color: #8BC2D1;
+  }
+  example-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .example-container > * {
+    margin-left: 30px;
+   text-align: center;
+   
+  }
+
+  mat-card-header{
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+  }
+  
+  .but{
+    background-color: #8BC2D1; 
+  }
+  .tool{ 
+    background-color: #8BC2D1; 
+    position: relative;
+  }
+  .total{
+      margin-top: 30px;
+      margin-left: 100px;
+      text-align: center;
+      justify-content: center;
+    align-items: center;
+  }
+
+  .mat-elevation-z10{
+    padding: 7px;
+    background-color: #CEE3F6;
+    text-align: center;
+
+  }
+  .card{
+    width: 70%;
+    height: 80%;
+    
+  margin: auto;
+ 
+  background-color: white;
+}

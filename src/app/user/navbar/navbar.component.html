@@ -1,0 +1,20 @@
+<div>
+  <mat-toolbar class="toolbar">
+    <ul id="menu">
+      <li>
+        <a [routerLink]="['/home']" routerLinkActive="active-link" class="home">Home</a>
+      </li>
+      <li>
+        <a [routerLink]="['/contact-us']" routerLinkActive="active-link"> Contact</a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/about']" routerLinkActive="active-link">About</a>
+     </li>
+     <li>
+      <a [routerLink]="['/login']" routerLinkActive="active-link">Admin</a>
+   </li>
+    </ul>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</div>

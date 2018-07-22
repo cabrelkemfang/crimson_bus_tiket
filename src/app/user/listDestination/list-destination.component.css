@@ -1,0 +1,41 @@
+.example-container{
+    margin-left: 5%;
+    margin-top: 3%;
+    
+}
+
+ .destination,.time{
+    display:inline-block;
+    vertical-align: top;
+    width:42%;
+    margin-bottom:2%;
+
+}
+.time{
+    margin-right:2%;
+    margin-left:2%;
+}
+
+.btn{
+    margin-left:80%;
+    margin-bottom:1%;
+}
+
+.card{
+    width: 70%;
+    height: 80%;
+    text-align: center;
+    justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
+  background-color: white;
+}
+
+.mat-elevation-z10{
+    padding: 7px;
+    background-color: #CEE3F6;
+}
+mat-list-item:hover{
+    background-color: lightblue;
+}

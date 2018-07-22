@@ -1,0 +1,69 @@
+
+<mat-card class="card">
+    <p class="mat-elevation-z10">Available Destination</p>
+
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let lst of ELEMENT_DATA ">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                   {{lst.destinationName}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    Departure Time for {{lst.destinationName}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                    <mat-list-item *ngFor='let list of lst.departure_times' (click)="open(list,lst.destinationName)" >-> {{list.time}} </mat-list-item>
+                </mat-list>
+
+        </mat-expansion-panel>
+
+      <!--  <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    DOUALA
+                </mat-panel-title>
+                <mat-panel-description>
+                    Departure Time for Douala
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                <mat-list-item *ngFor='let list of douala' (click)="open(list,this.douala1)" >-> {{list}} </mat-list-item>
+            </mat-list>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    BAMENDA
+                </mat-panel-title>
+                <mat-panel-description>
+                    Departure Time for Bamenda
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                    <mat-list-item *ngFor='let list of bamenda' (click)="open(list,this.bamenda1)" >-> {{list}} </mat-list-item>
+                </mat-list>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                   BAFOUSSAM
+                </mat-panel-title>
+                <mat-panel-description>
+                    Departure Time for Bafoussam
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-list>
+                    <mat-list-item *ngFor='let list of bafoussam' (click)="open(list,this.bafoussam1)" >-> {{list}} </mat-list-item>
+                </mat-list>
+
+        </mat-expansion-panel>
+    -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                
+            </mat-expansion-panel-header>
+        </mat-expansion-panel>
+    </mat-accordion>

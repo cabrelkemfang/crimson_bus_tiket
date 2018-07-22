@@ -1,0 +1,61 @@
+.table {
+    width: 80%;
+    margin-left:10%;
+    margin-top: 2%;
+}
+  .greetings{
+    margin-left: 45%; 
+    padding:10px; 
+       
+   }
+   .tool{
+    width:60%;
+    margin-left:20%;
+    margin-top:2%;
+}
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .example-card{
+      margin: 50px;
+  }
+  .footer{
+ background-color: #8BC2D1;
+  }
+  example-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .example-container > * {
+    margin-left: 30px;
+   text-align: center;
+   
+  }
+
+  mat-card-header{
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+  }
+  .table0 tr:hover{
+    background-color: #8BC2D1
+  }
+  .but{
+    background-color: #8BC2D1; 
+  }
+  .tool{ 
+    background-color: #8BC2D1; 
+    position: relative;
+  }
+  .total{
+      margin-top: 30px;
+      margin-left: 100px;
+      text-align: center;
+      justify-content: center;
+    align-items: center;
+  }

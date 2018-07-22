@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.main-div{
+    margin-left: 20%;
+}
+.my-background{
+    background-color: skyblue;
+    position:fixed;
+    min-height: 98.5%;
+    min-width: 98.5%;
+}
+body{
+    background: url(/assets/images/bg.png) ;
+    font-family: 'Roboto', sans-serif;
+}

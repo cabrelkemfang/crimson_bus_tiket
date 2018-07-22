@@ -1,0 +1,79 @@
+<div class="my-background">
+    <mat-toolbar class="tool"><span class="spa" >WELCOME MANAGER</span></mat-toolbar>
+    <button mat-raised-button color="primary" class="add" [routerLink]="['/user']">Create a user</button>
+  <button mat-raised-button color="accent" class="add" [routerLink]="['/view-clients']">View clients</button>
+
+    <div class="table mat-elevation-z8 card ">
+      <mat-table #table [dataSource]="ELEMENT_DATA">
+
+        <!-- Position Column -->
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Departure</mat-header-cell>
+          <mat-cell *matCellDef="let element" > {{element.destinationName}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="surname">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <td mat-cell *matCellDef="let element" (click)="edit(element)">
+            <button mat-raised-button color="primary">Edit</button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sit">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <td mat-cell *matCellDef="let element" (click)="delete(element)">
+            <button mat-raised-button color="warn">Delete</button>
+          </td>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+    <button mat-raised-button color="primary" class="add" [routerLink]="['/add']">Add Destination</button>
+  
+
+    <!-- <mat-card class="dash-card">
+     
+    <span class="heading">AVAILABLE DESTINATION</span>
+    <br/>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>
+        YAOUNDE
+        <button mat-raised-button color="primary" class="btn1" [routerLink]="['/edit-destination']">Edit</button>
+        <button mat-raised-button color="warn"  class="btn2">Delete</button>
+
+      </mat-list-item>
+      <mat-list-item>
+        DOUALA
+        <div  class="btn1">
+        <button mat-raised-button color="primary" [routerLink]="['/edit-destination']">Edit</button>
+        <button mat-raised-button color="warn"   class="btn2">Delete</button>
+</div>
+      </mat-list-item>
+      <mat-list-item>
+
+        BAFFOUSAM
+        <div  class="btn1">
+        <button mat-raised-button color="primary" [routerLink]="['/edit-destination']">Edit</button>
+        <button mat-raised-button color="warn"   class="btn2">Delete</button>
+</div>
+      </mat-list-item>
+      <mat-list-item>
+        BAMENDA
+        <button mat-raised-button color="primary"  class="btn1"[routerLink]="['/edit-destination']">Edit</button>
+        <button mat-raised-button color="warn"   class="btn2">Delete</button>
+
+      </mat-list-item>
+    </mat-list>
+    <br/>
+    <br/>
+
+
+   
+  </mat-card>
+-->
+</div>

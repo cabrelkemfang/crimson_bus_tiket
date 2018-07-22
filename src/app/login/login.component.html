@@ -1,0 +1,30 @@
+<div class="main-background" style="background-image:url('assets/images/bus4.jpg');">
+  
+  
+  <div class="example-sidenav-content">
+      <div class="app">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" class="card">
+                <h3>  <p class="mat-elevation-z10">Login Form</p> </h3>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Username" name="Username" required ngModel>
+                <mat-error>
+                  Please the Username is required
+                </mat-error>
+              </mat-form-field>
+  
+              <mat-form-field class="example-full-width">
+                <input matInput type="password" placeholder="Password" name="password" required ngModel>
+                <mat-error>
+                  Please the password is required
+                </mat-error>
+              </mat-form-field>
+  
+              <button mat-raised-button class="color1  example-full-width" type="submit" [disabled]="!form.form.valid">Login</button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  
+    </div>

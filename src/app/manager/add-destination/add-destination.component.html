@@ -1,0 +1,80 @@
+<div class="my-background">
+  <mat-toolbar class="tool">
+    <span class="greetings">ADD DESTINATION</span>
+  </mat-toolbar>
+
+  <div class="example-sidenav-content">
+    <div class="app">
+      <mat-card class="example-card">
+        <mat-card-content>
+
+          <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" class="card">
+            <mat-form-field class="example-full-width">
+              <input matInput type="text" placeholder="Destination " name="destinationName" required [(ngModel)]="destination.destinationName">
+              <mat-error>
+                Please the Destination is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput type="number" placeholder="Amount" name="amount" required [(ngModel)]="destination.amount">
+              <mat-error>
+                Please the Amount is required
+              </mat-error>
+            </mat-form-field>
+          </form>
+
+          <form #car="ngForm" (ngSubmit)="onSubmitcar(car.value)" class="card">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Available cars" name="carNumber" required ngModel>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <button mat-raised-button color="accent" type="submit">
+                    Add
+                  </button>
+
+                </td>
+                <td>
+                  <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let list of cars"> {{list}} </mat-list-item>
+                  </mat-list>
+
+                </td>
+
+              </tr>
+            </table>
+          </form>
+
+          <form #time="ngForm" (ngSubmit)="onSubmittime(time.value)" class="card">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Departure Time" name="time" ngModel required>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <button mat-raised-button color="accent" type="submit">
+                    Add
+                  </button>
+                </td>
+                <td>
+                  <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let list of times"> {{list}} </mat-list-item>
+
+                  </mat-list>
+                </td>
+              </tr>
+            </table>
+
+          </form>
+          <button mat-raised-button class="color1" type="submit" (click)="save()">Create</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>

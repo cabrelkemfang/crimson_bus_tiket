@@ -1,0 +1,119 @@
+<mat-card class="card">
+    <p class="mat-elevation-z10">Reservation</p>
+    <h3 class="dest"> Destination:{{destination}} </h3>
+    <h3 class="time"> Departure Time: {{list}} </h3>
+
+    <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" class="card">
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="First Name " name="firstName" required ngModel>
+            <mat-error>
+                Please the Full Name is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Last Name " name="lastName" required ngModel>
+            <mat-error>
+                Please the last Name is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Id card Number" name="cni" required ngModel>
+            <mat-error>
+                Please the Id card Number required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Tarif" name="amount" value="Sushi" required [(ngModel)]="amount">
+            <mat-error>
+                Please the Tarif is required
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Enter date" name="departure_date" required ngModel>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error>
+                Please the Tarif is required
+            </mat-error>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput  placeholder="Car Number" name="carNumber"  required [(ngModel)]="car_number" >
+            <mat-error>
+                Please the Car Number is required
+            </mat-error>
+        </mat-form-field>
+            <mat-card class="seat1" >
+                <mat-checkbox *ngFor="let list of A" (click)="open(list)" >{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of B" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of C" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of D" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of E" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of F" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+                <mat-checkbox *ngFor="let list of G" (click)="open(list)">{{list}}</mat-checkbox>
+                <br>
+            </mat-card>
+            <br>
+        
+        <button mat-raised-button class="color1" type="submit" [disabled]="!form.form.valid">Save</button>
+        <button mat-raised-button color="warn" type="reset">Resert</button>
+    </form>
+
+
+
+    <!--  <form class="app-form" [formGroup]="form">
+        <mat-form-field class="app-input">
+            <input type="text" matInput formControlName="name" class="form-control" placeholder="Name" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="app-input">
+            <input type="text" matInput formControlName="surname" class="form-control" placeholder="Surname" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="app-input">
+            <input type="number" matInput formControlName="id" class="form-control" placeholder="Id card Number" required>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="app-input">
+            <input type="number" matInput formControlName="tarif" class="form-control" placeholder="Tarif" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="app-input">
+            <input matInput [matDatepicker]="picker" placeholder="Enter date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <p>Red : Occupied</p>
+        <p>Green: Available</p>
+
+        <h4 class="dest"> Select a Sit</h4>
+        <hr class="line">
+
+        <mat-form-field class="app-input">
+            <input type="number" matInput formControlName="seatNumber" class="form-control" placeholder="Seat Number" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="app-input">
+            <input type="text" matInput formControlName="carNumber" class="form-control" placeholder="Car Number" required>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" class="btn">Save</button>
+        <button mat-raised-button color="warn" class="btn1">cancel</button>
+
+    </form>-->
+</mat-card>

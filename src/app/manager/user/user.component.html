@@ -1,0 +1,48 @@
+<div class="example-sidenav-content">
+  <div class="app">
+    <mat-card class="example-card">
+      <mat-card-content>
+
+        <form #form="ngForm" (ngSubmit)="onSubmit(form.value)" class="card">
+          <p  class="mat-elevation-z10">New User</p>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="First Name " name="firstName" required ngModel>
+            <mat-error>
+              Please the First Name is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+              <input matInput type="text" placeholder="Last Name " name="lastName" required ngModel>
+              <mat-error>
+                Please the Last Name is required
+              </mat-error>
+            </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="User Name " name="userName" required ngModel>
+            <mat-error>
+              Please the User Name  is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Phone Number " name="phone" required ngModel>
+            <mat-error>
+              Please the Phone Number required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Password" name="password" required ngModel>
+            <mat-error>
+              Please the password is required
+            </mat-error>
+          </mat-form-field>
+          <button mat-raised-button class="color1" type="submit" [disabled]="!form.form.valid">Create</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
